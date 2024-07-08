@@ -57,7 +57,8 @@ extension LibreTransmitterManagerV3: CGMManagerUI {
         let hostedView = DismissibleHostingController(
             content: settingsView
                 .navigationTitle(self.localizedTitle)
-                .environmentObject(displayGlucosePreference)
+                .environmentObject(displayGlucosePreference),
+            guidanceColors: GuidanceColors()
         )
 
         let nav = CGMManagerSettingsNavigationViewController(rootViewController: hostedView)
